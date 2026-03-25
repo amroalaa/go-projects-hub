@@ -17,19 +17,23 @@
         <h1>قائمة مشاريع لغة Go العشرة</h1>
         <table>
             <tr>
-                <th>الرقم</th>
-                <th>اسم المشروع</th>
-                <th>المفهوم البرمجي</th>
-                <th>الرابط</th> <!-- عمود جديد -->
-            </tr>
-            {{range .}} <!-- حلقة تكرارية من لغة Go داخل HTML -->
-            <tr>
-                <td>{{.ID}}</td>
-                <td>{{.Title}}</td>
-                <td>{{.Skill}}</td>
-                <th>الرابط</th> <!-- عمود جديد -->
-            </tr>
-            {{end}}
+    <th>الرقم</th>
+    <th>اسم المشروع</th>
+    <th>المفهوم</th>
+    <th>ملفات المشروع</th>
+</tr>
+{{range .}}
+<tr>
+    <td>{{.ID}}</td>
+    <td>{{.Title}}</td>
+    <td>{{.Skill}}</td>
+    <td>
+        <a href="{{.Link}}" target="_blank" style="background: #00add8; color: white; padding: 5px 10px; text-decoration: none; border-radius: 4px; font-size: 12px;">
+            تصفح المجلد 📁
+        </a>
+    </td>
+</tr>
+{{end}}
         </table>
     </div>
 </body>
